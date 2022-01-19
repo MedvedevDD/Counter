@@ -15,6 +15,8 @@ type SettingsPropsType = {
     SetSettings: () => void
     MinValueChange:(e:number)=>void
     MaxValueChange:(e:number)=>void
+    ResetSettings:()=>void
+    disabled:boolean
 
 }
 
@@ -29,18 +31,27 @@ function Settings(props: SettingsPropsType) {
                     ReduceMinCount={props.ReduceMinCount}
                     startValue={props.startValue}
                     MinValueChange={props.MinValueChange}
+                    disabled={props.disabled}
 
                 />
                 <InputMax
                     IncreaseMaxCount={props.IncreaseMaxCount}
                     ReduceMaxCount={props.ReduceMaxCount}
                     stopValue={props.stopValue}
+                    MaxValueChange={props.MaxValueChange}
+                    disabled={props.disabled}
                 />
             </div>
             <div className={s.Buttons}>
                 <Button title="SetValue"
                         action={props.SetSettings}
+                        disabled={props.disabled}
                 />
+                <div className={props.disabled ? s.disabled : ""}>
+                <Button title="ResSet"
+                        action={props.ResetSettings}
+                />
+                </div>
             </div>
         </div>
     );

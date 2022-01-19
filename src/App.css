@@ -1,8 +1,19 @@
 .Main {
-    background-color: teal;
+
+    background: teal;
+
+
+
 }
 .App {
-
     display: flex;
-    justify-content: space-around;
+justify-content: space-around;
+
 }
+
+/*.Settings {*/
+/*    display: flex;*/
+/*}*/
+/*.Counter {*/
+/*    display: flex;*/
+/*}*/
