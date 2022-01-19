@@ -1,0 +1,17 @@
+.buttonBox {
+
+    text-align: center;
+    margin-top: 30px;
+
+
+}
+.button {
+    width: 120px;
+    height: 45px;
+    background-color: cadetblue;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 20px;
+    border-color: darkturquoise;
+}
+

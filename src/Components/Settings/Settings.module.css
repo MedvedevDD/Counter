@@ -1,0 +1,40 @@
+.Settings {
+    width: 300px;
+    height: 300px;
+    background-color: cadetblue;
+    border: 4px solid green;
+    margin: 50px auto auto;
+
+    border-radius: 35px;
+}
+
+.Input {
+    width: 280px;
+    height: 200px;
+    border: 4px solid green;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 6px;
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 35px;
+
+
+
+}
+
+.Buttons {
+    block-size: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+/*.red {*/
+/*    background-color: red;*/
+/*}*/
+/*.green {*/
+/*    background-color: green;*/
+/*}*/
