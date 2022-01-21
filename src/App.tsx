@@ -87,6 +87,7 @@ function App() {
                              Reset={Reset}
                              maxCount={maxCount}
                              minCount={minCount}
+                             disabled={disabled}
                     />
                 </div>
 
