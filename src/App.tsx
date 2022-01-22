@@ -30,7 +30,7 @@ function App() {
 
     useEffect(() => {
         localStorage.setItem('currentValue', JSON.stringify(value))
-
+//        value>0 ? setDisabled(true) : setDisabled(false)
         localStorage.setItem('currentMinValue', JSON.stringify(minCount))
         localStorage.setItem('currentMaxValue', JSON.stringify(maxCount))
     }, [value, minCount, maxCount])
@@ -82,18 +82,18 @@ function App() {
     // }
 
     function MinValueChange(e: number) {
-        minCount <= -1 || maxCount <= minCount ? setDisabled(true) : setMinCount(e)
-        if (maxCount == minCount + 1) {
-            setMaxCount(maxCount + 1)
-        }
+        e < 0 || maxCount <= minCount ? setDisabled(true) : setMinCount(e)
+        // if (maxCount === minCount + 1) {
+        //     setMaxCount(maxCount + 1)
+        // }
     }
 
     function MaxValueChange(e: number) {
-        maxCount <= 0 || maxCount < minCount + 1 ? setDisabled(true) : setMaxCount(e)
+        e < 1 || maxCount < minCount + 1 ? setDisabled(true) : setMaxCount(e)
     }
 
     return (
-        <div className="Main">
+
             <div className="App">
                 <div className={"Settings"}>
                     <Settings
@@ -123,7 +123,6 @@ function App() {
 
 
             </div>
-        </div>
     );
 }
 
