@@ -9,7 +9,11 @@ function App() {
     const [minCount, setMinCount] = useState(0)
     const [maxCount, setMaxCount] = useState(minCount + 1)
     const [disabled, setDisabled] = useState(false)
+    const [settings, setSettings] = useState(false)
 
+    function switchOnSettings() {
+        setSettings(true)
+    }
 
     const [value, setValue] = useState(minCount)
 
@@ -58,6 +62,7 @@ function App() {
         if (maxCount <= minCount) {
             setMaxCount(minCount + 1)
         }
+        setSettings(false)
     }
 
     //
@@ -94,7 +99,8 @@ function App() {
 
     return (
 
-            <div className="App">
+        <div className="App">
+            {settings ?
                 <div className={"Settings"}>
                     <Settings
                         startValue={minCount}
@@ -110,7 +116,7 @@ function App() {
                         disabled={disabled}
                     />
                 </div>
-
+                :
                 <div className={"Counter"}>
                     <Counter currentValue={value}
                              Incrimination={Incrimination}
@@ -118,11 +124,12 @@ function App() {
                              maxCount={maxCount}
                              minCount={minCount}
                              disabled={disabled}
+                             switchOnSettings={switchOnSettings}
                     />
                 </div>
+            }
 
-
-            </div>
+        </div>
     );
 }
 

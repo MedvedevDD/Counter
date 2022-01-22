@@ -9,6 +9,7 @@ type CounterPropsType = {
     maxCount:number
     minCount:number
     disabled:boolean
+    switchOnSettings:()=>void
 }
 
 function Counter(props: CounterPropsType) {
@@ -34,6 +35,7 @@ let counterClassName = props.currentValue === props.maxCount ? s.Max : s.Indicat
                         maxCount={props.maxCount}
                         minCount={props.minCount}
                 />
+                <Button title="Settings" action={props.switchOnSettings}/>
             </div>
         </div>
     );
