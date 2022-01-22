@@ -1,25 +1,32 @@
 
 .Input {
     height: 50px;
-display: flex;
-
-
-
+    display: flex;
 
 
 }
+
 .InputValue {
     width: 100px;
     height: 30px;
-    border-radius: 25px;
+    border: 2px solid darkturquoise;
+    border-radius: 10px;
     text-align: center;
     font-size: 20px;
     font-weight: bolder;
 
 }
+
 .button {
     height: 35px;
     width: 35px;
     border: 2px solid teal;
     border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 30px;
 }
